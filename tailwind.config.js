@@ -16,7 +16,7 @@ export default {
         'Off-White': 'hsl(0, 0%, 94%)',
         'Light-Grey': 'hsl(0, 0%, 86%)',
         'Smokey-Grey': 'hsl(0, 1%, 44%)',
-        'Off-Black': 'hsl(0, 0, 8%)',
+        'Off-Black': 'hsl(0, 0%, 8%)',
       }
     },
   },
