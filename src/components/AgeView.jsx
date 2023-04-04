@@ -26,7 +26,7 @@ export const AgeView = ({
         <div className='font-Poppins'>
             <h1 className='text-[3.35rem] leading-[3rem] lg:leading-[5.5rem] lg:text-8xl text-Purple font-extrabold italic'>
                 {
-                    years === newYears?
+                    newYears === '- -'?
                         '- -'
                         :
                         <animated.span>{yearsProps.val.interpolate(val => Math.floor(val))}</animated.span>
@@ -34,7 +34,7 @@ export const AgeView = ({
                 <span className='text-Off-Black ml-3'>years</span></h1>
             <h1 className='text-[3.35rem] leading-[3rem] lg:leading-[5.5rem] lg:text-8xl text-Purple font-extrabold italic'>
                 {
-                    months === newMonths?
+                    newMonths === '- -'?
                         '- -'
                         :
                         <animated.span>{monthsProps.val.interpolate(val => Math.floor(val))}</animated.span>
@@ -42,7 +42,7 @@ export const AgeView = ({
                 <span className='text-Off-Black ml-3'>months</span></h1>
             <h1 className='text-[3.35rem] leading-[3rem] lg:leading-[5.5rem] lg:text-8xl text-Purple font-extrabold italic'>
                 {
-                    days === newDays?
+                    newDays === '- -'?
                         '- -'
                         :
                         <animated.span>{daysProps.val.interpolate(val => Math.floor(val))}</animated.span>

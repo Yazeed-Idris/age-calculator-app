@@ -11,11 +11,12 @@ export const DatePicker = ({calculateYearsMonthsDays}) => {
 
     // function validate
     function checkDay(e) {
-        console.log('e.target.value', e.target.value);
+        console.log('parsing', parseInt(e.target.value))
        if (e.target.value === '') {
             setDayErrorMessage('This field is required');
             setDay('')
-        } else if (parseInt(e.target.value) > 31 || parseInt(e.target.value) < 1 || !Number.isInteger(parseInt(e.target.value))) {
+        } else if (parseInt(e.target.value) > 31 || parseInt(e.target.value) < 1 || !Number.isInteger(Number(e.target.value))) {
+           console.log('match result', e.target.value.match(/[0-2]\d|3[0-1]/))
             setDayErrorMessage('Must be valid day');
             setTimeout(() => {
                 setDayErrorMessage(null);
@@ -32,7 +33,7 @@ export const DatePicker = ({calculateYearsMonthsDays}) => {
         if (e.target.value === '') {
             setMonthErrorMessage('This field is required');
             setMonth('')
-        } else if (parseInt(e.target.value) > 12 || parseInt(e.target.value) < 1 || !Number.isInteger(parseInt(e.target.value))) {
+        } else if (parseInt(e.target.value) > 12 || parseInt(e.target.value) < 1 || !Number.isInteger(Number(e.target.value))) {
             setMonthErrorMessage('Must be valid month');
             setTimeout(() => {
                 setMonthErrorMessage(null);
