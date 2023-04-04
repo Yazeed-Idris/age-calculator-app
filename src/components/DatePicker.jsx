@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const DatePicker = () => {
+export const DatePicker = ({calculateYearsMonthsDays}) => {
    const [dayErrorMessage, setDayErrorMessage] = useState(null);
     const [monthErrorMessage, setMonthErrorMessage] = useState(null);
     const [yearErrorMessage, setYearErrorMessage] = useState(null);
@@ -80,6 +80,7 @@ export const DatePicker = () => {
             return;
         }
         setDateErrorMessage(null);
+        calculateYearsMonthsDays(day, month, year);
 
     }
 
